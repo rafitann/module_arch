@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 class UserEntity {
   final int id;
   final String name;
