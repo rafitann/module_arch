@@ -9,6 +9,15 @@ class AppWidget extends StatelessWidget {
     Modular.setInitialRoute("/auth/login");
     return MaterialApp.router(
       theme: ThemeData.light().copyWith(
+        inputDecorationTheme: InputDecorationTheme(
+            enabledBorder: OutlineInputBorder(
+                borderSide:
+                    const BorderSide(width: 2, color: Colors.pink),
+                borderRadius: BorderRadius.circular(30)),
+            focusedBorder: OutlineInputBorder(
+                borderSide:
+                    const BorderSide(width: 2, color: Colors.blueAccent),
+                borderRadius: BorderRadius.circular(30))),
         primaryColor: Colors.pinkAccent,
         floatingActionButtonTheme: const FloatingActionButtonThemeData(
           backgroundColor: Colors.pinkAccent,

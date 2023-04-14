@@ -9,25 +9,37 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.pinkAccent,
-        title: const Text("Login"),
-        actions: [],
-      ),
-      body: Column(
-        children: [
-          TextField(
-            controller: emailController,
+        appBar: AppBar(
+          backgroundColor: Colors.pinkAccent,
+          title: const Text("Login"),
+          actions: [],
+        ),
+        body: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Column(
+            children: [
+              TextField(
+                controller: emailController,
+                decoration: const InputDecoration(hintText: "Email"),
+              ),
+              const SizedBox(
+                height: 24,
+              ),
+              TextField(
+                controller: passwordController,
+                 decoration: const InputDecoration(hintText: "Senha"),
+              ),
+            ],
           ),
-          TextField(
-            controller: passwordController,
-          ),
-        ],
-      ),
-      floatingActionButton: FloatingActionButton.extended(
-        onPressed: () {},
-        label: Text("Entrar"),
-      ),
-    );
+        ),
+        floatingActionButton: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            FloatingActionButton.extended(
+              onPressed: () {},
+              label: Text("Entrar"),
+            ),
+          ],
+        ));
   }
 }
