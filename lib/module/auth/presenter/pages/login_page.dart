@@ -18,6 +18,17 @@ class LoginPage extends StatelessWidget {
           padding: const EdgeInsets.all(16),
           child: Column(
             children: [
+              Row(
+                children: const [
+                  Text(
+                    "Digite seu Email: ",
+                    style: TextStyle(fontSize: 18, color: Colors.black),
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 8,
+              ),
               TextField(
                 controller: emailController,
                 decoration: const InputDecoration(hintText: "Email"),
@@ -25,9 +36,20 @@ class LoginPage extends StatelessWidget {
               const SizedBox(
                 height: 24,
               ),
+              Row(
+                children: const [
+                  Text(
+                    "Digite sua Senha: ",
+                    style: TextStyle(fontSize: 18, color: Colors.black),
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 8,
+              ),
               TextField(
                 controller: passwordController,
-                 decoration: const InputDecoration(hintText: "Senha"),
+                decoration: const InputDecoration(hintText: "Senha"),
               ),
             ],
           ),
