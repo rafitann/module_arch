@@ -1,4 +1,4 @@
-import '../../domain/entities/user_entity.dart';
+import '../../../../core/modules/user/domain/entities/user_entity.dart';
 
 class UserMapper {
   const UserMapper._();

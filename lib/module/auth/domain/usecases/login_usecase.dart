@@ -1,5 +1,5 @@
 import 'package:fpdart/fpdart.dart';
-import 'package:modulearch/module/auth/domain/entities/user_entity.dart';
+import 'package:modulearch/core/modules/user/domain/entities/user_entity.dart';
 import 'package:modulearch/module/auth/domain/failures/auth_failure.dart';
 import 'package:modulearch/module/auth/domain/params/login_param.dart';
 
@@ -25,8 +25,7 @@ class LoginUseCaseImpl implements LoginUseCase {
       ));
     }
 
-    final RegExp regexEmail =
-        RegExp(r'/^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?$/i');
+    final regexEmail = RegExp(r'^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?$');
 
     if (!regexEmail.hasMatch(param.email)) {
       return Left(

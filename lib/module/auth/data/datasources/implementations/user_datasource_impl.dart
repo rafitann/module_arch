@@ -1,5 +1,5 @@
-import 'package:modulearch/module/auth/data/datasources/interfaces/User_datasource.dart';
-import 'package:modulearch/module/auth/domain/entities/user_entity.dart';
+import 'package:modulearch/module/auth/data/datasources/interfaces/user_datasource.dart';
+import 'package:modulearch/core/modules/user/domain/entities/user_entity.dart';
 
 import '../../../../../core/shared/services/firestore/firestore_service.dart';
 import '../../mappers/user_mapper.dart';

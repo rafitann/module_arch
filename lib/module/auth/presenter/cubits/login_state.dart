@@ -1,4 +1,4 @@
-import 'package:modulearch/module/auth/domain/entities/user_entity.dart';
+import 'package:modulearch/core/modules/user/domain/entities/user_entity.dart';
 import 'package:modulearch/module/auth/domain/failures/auth_failure.dart';
 
 abstract class LoginState {

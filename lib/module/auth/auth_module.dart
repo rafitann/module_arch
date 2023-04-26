@@ -4,14 +4,24 @@ import 'package:modulearch/module/auth/data/repositories/login_repository.dart';
 import 'package:modulearch/module/auth/domain/usecases/login_usecase.dart';
 import 'package:modulearch/module/auth/presenter/pages/login_page.dart';
 
+import '../../core/modules/user/presenter/cubits/user_cubit.dart';
+import '../../core/shared/services/overlay/overlay_service.dart';
 import 'data/datasources/implementations/user_datasource_impl.dart';
 import 'presenter/cubits/login_cubit.dart';
 
 class AuthModule extends Module {
   @override
-  List<ModularRoute> get routes => [
-        ChildRoute("/login", child: (context, args) => LoginPage()),
-      ];
+  final List<ModularRoute> routes = [
+    ChildRoute(
+      "/login",
+      child: (context, args) => LoginPage(
+        loginCubit: Modular.get<LoginCubit>(),
+        overlayService: Modular.get<OverlayService>(),
+        userCubit: Modular.get<UserCubit>(),
+      ),
+    ),
+  ];
+
   @override
   final List<Bind<Object>> binds = [
     Bind.factory((i) => LoginUseCaseImpl(loginRepository: i())),

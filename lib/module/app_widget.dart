@@ -1,18 +1,20 @@
+import 'package:asuka/asuka.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:modulearch/core/shared/services/snackbar/snackbar_service.dart';
 
 class AppWidget extends StatelessWidget {
   const AppWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
-    Modular.setInitialRoute("/auth/login");
+    // Modular.setInitialRoute("/auth/login");
+
     return MaterialApp.router(
       theme: ThemeData.light().copyWith(
         inputDecorationTheme: InputDecorationTheme(
             enabledBorder: OutlineInputBorder(
-                borderSide:
-                    const BorderSide(width: 2, color: Colors.pink),
+                borderSide: const BorderSide(width: 2, color: Colors.pink),
                 borderRadius: BorderRadius.circular(30)),
             focusedBorder: OutlineInputBorder(
                 borderSide:
@@ -27,6 +29,8 @@ class AppWidget extends StatelessWidget {
       routerDelegate: Modular.routerDelegate,
       debugShowCheckedModeBanner: false,
       title: 'Todo App',
+      builder: Asuka.builder,
+      scaffoldMessengerKey: SnackbarService.instance.scaffoldMessengerKey,
     );
   }
 }
