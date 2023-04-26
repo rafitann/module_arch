@@ -5,6 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:modulearch/core/modules/user/presenter/cubits/user_cubit.dart';
 import 'package:modulearch/core/shared/services/overlay/overlay_service.dart';
+import 'package:modulearch/core/shared/themes/app_strings.dart';
 import 'package:modulearch/module/auth/domain/params/login_param.dart';
 import 'package:modulearch/module/auth/presenter/cubits/login_cubit.dart';
 import 'package:modulearch/module/auth/presenter/cubits/login_state.dart';
@@ -66,7 +67,6 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.pinkAccent,
           title: const Text("Login"),
           actions: const [],
         ),
@@ -132,7 +132,7 @@ class _LoginPageState extends State<LoginPage> {
                       },
                 label: state is LoginLoadingState
                     ? const CircularProgressIndicator()
-                    : const Text("Entrar"),
+                    : const Text(AppStrings.login),
               );
             }));
   }
