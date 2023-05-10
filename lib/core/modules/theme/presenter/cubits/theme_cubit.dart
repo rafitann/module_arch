@@ -5,7 +5,7 @@ enum ThemeStyle { dark, light, blue, purple }
 class ThemeCubit extends Cubit<ThemeStyle> {
   ThemeCubit() : super(ThemeStyle.dark);
 
-  bool get isDark => state is ThemeStyle.dark;
+  bool get isDark => state == ThemeStyle.dark;
 
   Future<void> next() async {
     var nextIndex = state.index + 1;

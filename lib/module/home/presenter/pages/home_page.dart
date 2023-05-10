@@ -21,12 +21,12 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         actions: [
-          BlocBuilder<UserCubit, UserState>(
+          BlocBuilder<ThemeCubit, ThemeStyle>(
             bloc: themeCubit,
             builder: (_, state) {
               var icon = Icons.dark_mode;
-              if(!themeCubit.isDark) icon = Icons.light_mode;
-              
+              if (!themeCubit.isDark) icon = Icons.light_mode;
+
               return IconButton(
                 onPressed: themeCubit.next,
                 icon: Icon(icon),
