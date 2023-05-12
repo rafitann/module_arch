@@ -1,7 +1,7 @@
 import 'package:fpdart/fpdart.dart';
-import 'package:modulearch/core/modules/user/domain/entities/user_entity.dart';
-import 'package:modulearch/module/auth/domain/failures/auth_failure.dart';
-import 'package:modulearch/module/auth/domain/params/login_param.dart';
+import '/core/modules/user/domain/entities/user_entity.dart';
+import '/module/auth/domain/failures/auth_failure.dart';
+import '/module/auth/domain/params/login_param.dart';
 
 import '../repositories/login_repository.dart';
 
@@ -10,11 +10,10 @@ abstract class LoginUseCase {
 }
 
 class LoginUseCaseImpl implements LoginUseCase {
-  final LoginRepository _loginRepository;
-
   const LoginUseCaseImpl({
     required LoginRepository loginRepository,
   }) : _loginRepository = loginRepository;
+  final LoginRepository _loginRepository;
 
   @override
   Future<Either<AuthFailure, UserEntity>> call(LoginParam param) async {

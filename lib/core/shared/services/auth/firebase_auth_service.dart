@@ -1,4 +1,4 @@
-import 'package:modulearch/core/shared/services/auth/helpers/responses.dart';
+import '/core/shared/services/auth/helpers/responses.dart';
 
 import 'auth_service.dart';
 import 'helpers/failures.dart';

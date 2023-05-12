@@ -1,5 +1,5 @@
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:modulearch/module/auth/auth_module.dart';
+import '/module/auth/auth_module.dart';
 
 import '../core/core_module.dart';
 import '../core/shared/guards/auth_guard.dart';

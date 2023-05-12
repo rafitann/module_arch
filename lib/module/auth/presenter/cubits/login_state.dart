@@ -1,5 +1,5 @@
-import 'package:modulearch/core/modules/user/domain/entities/user_entity.dart';
-import 'package:modulearch/module/auth/domain/failures/auth_failure.dart';
+import '/core/modules/user/domain/entities/user_entity.dart';
+import '/module/auth/domain/failures/auth_failure.dart';
 
 abstract class LoginState {
   const LoginState();
@@ -10,13 +10,13 @@ class LoginInitialState extends LoginState {
 }
 
 class LoginErrorState extends LoginState {
-  final AuthFailure failure;
   const LoginErrorState(this.failure);
+  final AuthFailure failure;
 }
 
 class LoginSuccessState extends LoginState {
-  final UserEntity user;
   const LoginSuccessState(this.user);
+  final UserEntity user;
 }
 
 class LoginLoadingState extends LoginState {

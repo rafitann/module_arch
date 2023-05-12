@@ -5,9 +5,9 @@ abstract class UserState {
 }
 
 class UserAuthenticatedState extends UserState {
-  final UserEntity user;
-
   const UserAuthenticatedState(this.user);
+
+  final UserEntity user;
 }
 
 class UserUnauthenticatedState extends UserState {

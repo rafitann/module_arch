@@ -1,16 +1,15 @@
 import 'package:fpdart/fpdart.dart';
-import 'package:modulearch/core/modules/user/domain/entities/user_entity.dart';
-import 'package:modulearch/module/auth/domain/failures/auth_failure.dart';
-import 'package:modulearch/module/auth/domain/params/login_param.dart';
-import 'package:modulearch/module/auth/domain/repositories/login_repository.dart';
+import '/core/modules/user/domain/entities/user_entity.dart';
+import '/module/auth/domain/failures/auth_failure.dart';
+import '/module/auth/domain/params/login_param.dart';
+import '/module/auth/domain/repositories/login_repository.dart';
 
 import '../datasources/datasources.dart';
 
 class LoginRepositoryImpl implements LoginRepository {
+  const LoginRepositoryImpl(this._datasource, this._userDatasource);
   final LoginDatasource _datasource;
   final UserDatasource _userDatasource;
-
-  const LoginRepositoryImpl(this._datasource, this._userDatasource);
 
   @override
   Future<Either<AuthFailure, UserEntity>> login(LoginParam params) async {

@@ -1,14 +1,14 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:modulearch/module/auth/domain/params/login_param.dart';
-import 'package:modulearch/module/auth/domain/usecases/login_usecase.dart';
-import 'package:modulearch/module/auth/presenter/cubits/login_state.dart';
+import '/module/auth/domain/params/login_param.dart';
+import '/module/auth/domain/usecases/login_usecase.dart';
+import '/module/auth/presenter/cubits/login_state.dart';
 
 class LoginCubit extends Cubit<LoginState> {
-  final LoginUseCase _loginUseCase;
-
   LoginCubit({required LoginUseCase loginUseCase})
       : _loginUseCase = loginUseCase,
         super(const LoginInitialState());
+  final LoginUseCase _loginUseCase;
 
   Future<void> login(LoginParam loginParam) async {
     emit(const LoginLoadingState());
@@ -22,6 +22,6 @@ class LoginCubit extends Cubit<LoginState> {
       (r) => emit(LoginSuccessState(r)),
     );
 
-    print(state);
+    debugPrint(state.toString());
   }
 }

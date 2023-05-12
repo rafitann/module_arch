@@ -3,26 +3,25 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:modulearch/core/modules/user/presenter/cubits/user_cubit.dart';
-import 'package:modulearch/core/shared/services/overlay/overlay_service.dart';
-import 'package:modulearch/core/shared/themes/app_strings.dart';
-import 'package:modulearch/module/auth/domain/params/login_param.dart';
-import 'package:modulearch/module/auth/presenter/cubits/login_cubit.dart';
-import 'package:modulearch/module/auth/presenter/cubits/login_state.dart';
 
+import '../../../../core/modules/user/presenter/cubits/user_cubit.dart';
+import '../../../../core/shared/services/overlay/overlay_service.dart';
 import '../../../../core/shared/services/snackbar/snackbar_service.dart';
+import '../../../../core/shared/themes/app_strings.dart';
+import '../../domain/params/login_param.dart';
+import '../cubits/login_cubit.dart';
+import '../cubits/login_state.dart';
 
 class LoginPage extends StatefulWidget {
-  final LoginCubit loginCubit;
-  final UserCubit userCubit;
-  final OverlayService _overlayService;
-
   const LoginPage({
     super.key,
     required OverlayService overlayService,
     required this.loginCubit,
     required this.userCubit,
   }) : _overlayService = overlayService;
+  final LoginCubit loginCubit;
+  final UserCubit userCubit;
+  final OverlayService _overlayService;
 
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -123,7 +122,7 @@ class _LoginPageState extends State<LoginPage> {
                 onPressed: state is LoginLoadingState
                     ? null
                     : () async {
-                        print('tapped');
+                        debugPrint('tapped');
                         final param = LoginParam(
                           email: emailController.text,
                           password: passwordController.text,

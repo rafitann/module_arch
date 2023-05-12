@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import 'overlay_service.dart';
 
 class AsukaOverlayService implements OverlayService {
-  OverlayEntry? _entry;
-
   AsukaOverlayService();
+
+  OverlayEntry? _entry;
 
   @override
   Future<void> hide() async {

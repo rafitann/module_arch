@@ -1,12 +1,12 @@
 name: modulearch
 description: A new Flutter project.
 
-publish_to: "none"
+publish_to: 'none'
 
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.18.5 <3.0.0"
+  sdk: '>=2.18.5 <3.0.0'
 
 dependencies:
   flutter:
@@ -16,6 +16,7 @@ dependencies:
   flutter_modular: ^5.0.3
   fpdart: ^0.5.0
   flutter_bloc: ^8.1.2
+  mocktail: ^0.3.0
   asuka: ^2.0.2
 
 dev_dependencies:

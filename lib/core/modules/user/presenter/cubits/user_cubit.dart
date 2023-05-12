@@ -1,5 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:modulearch/core/modules/user/presenter/cubits/user_state.dart';
+import '/core/modules/user/presenter/cubits/user_state.dart';
 
 import '../../domain/entities/user_entity.dart';
 

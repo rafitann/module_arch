@@ -1,8 +1,8 @@
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:modulearch/module/auth/data/datasources/implementations/login_datasource_impl.dart';
-import 'package:modulearch/module/auth/data/repositories/login_repository.dart';
-import 'package:modulearch/module/auth/domain/usecases/login_usecase.dart';
-import 'package:modulearch/module/auth/presenter/pages/login_page.dart';
+import '/module/auth/data/datasources/implementations/login_datasource_impl.dart';
+import '/module/auth/data/repositories/login_repository.dart';
+import '/module/auth/domain/usecases/login_usecase.dart';
+import '/module/auth/presenter/pages/login_page.dart';
 
 import '../../core/modules/user/presenter/cubits/user_cubit.dart';
 import '../../core/shared/services/overlay/overlay_service.dart';
